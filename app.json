@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "พักจอ พักกาย",
+    "slug": "pakjor",
+    "scheme": "pakjor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.pakjor.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.pakjor.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#CDEFE0"
+      },
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.USE_FULL_SCREEN_INTENT",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "plugins": [
+      "expo-font",
+      "expo-audio",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#F3FBF7"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#2F7A72",
+          "sounds": [
+            "./assets/sounds/break_alarm.wav",
+            "./assets/sounds/break_soft.wav",
+            "./assets/sounds/success.wav"
+          ]
+        }
+      ],
+      [
+        "@react-native-community/datetimepicker",
+        {}
+      ],
+      "./plugins/withBreakAlarmActivity"
+    ]
+  }
+}
